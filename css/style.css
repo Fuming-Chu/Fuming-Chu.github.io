@@ -363,102 +363,78 @@ img{
 /*** 
 
 ====================================================================
-	Header
+		Top Bar
 ====================================================================
 
  ***/
 
-.header {
-	position: absolute;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	background-color: #f8e9e9;
-	border-radius: 5px;
-	transition: .5s ease;
-	z-index: 99;
-	overflow: hidden;
+.top-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #fff;
+	padding: 0 30px;
+	height: 70px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	border-bottom: 1px solid #e5e5e5;
 }
 
-.card-outer .card-inner-box.offsetleft .header {
-	border-radius: 0px;
+.top-bar .top-bar-logo {
+	flex-shrink: 0;
 }
 
-.header ul {
-	text-align: center;
+.top-bar .top-bar-logo img {
+	max-height: 40px;
 }
 
-.header ul li {
+.top-bar .top-nav {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.top-bar .top-nav .main-menu {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.top-bar .top-nav .main-menu li {
 	position: relative;
-	min-width: 100px;
-	border-bottom: 1px solid #f0e2e2;
 }
 
-.header ul li:last-child {
-	border-bottom: 0px;
+.top-bar .top-nav .main-menu li a {
+	display: block;
+	padding: 8px 18px;
+	color: #555;
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	border-radius: 20px;
+	transition: all 0.3s ease;
 }
 
-.header ul li a.logo {
-    border: 2px solid #ebdddd;
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    padding: 0 0;
-    line-height: 54px;
-    margin: 20px auto;
+.top-bar .top-nav .main-menu li a:hover {
+	color: #9147ff;
+	background: #f5f0ff;
 }
 
-.header ul li.active a.logo {
-	background-color: transparent;
+.top-bar .top-nav .main-menu li.active a {
+	color: #fff;
+	background: #9147ff;
 }
 
-.header ul li a {
-	position: relative;
-	color: #212121;
-	padding: 15px 21px 12px;
-
-	display:  block;
-	font-size:  14px;
-	font-family:  'Poppins', sans-serif;
-	background: #f8e9e9;
-	z-index: 99;
+.top-bar .top-social {
+	display: flex;
+	flex-shrink: 0;
+	gap: 8px;
 }
 
-.header ul li:before {
-	position: absolute;
-	content: '';
-	background-color: #9147ff;
-	height: 50px;
-	width: 50px;
-	right: 10px;
-	top: 15px;
-	transform: rotate(45deg);
-	transition:  .5s ease;
-}
-
-.header ul li.active:before {
-	right: 0;
-	z-index: 99;
-}
-
-.header ul li.home:before {
-	display: none;
-}
-
-.header ul li a i {
-	display:  block;
-	color: #838383;
-	font-size: 24px;
-	margin-bottom: 3px;
-}
-
-.header ul li.active a {
-    background: #9147ff;
-    color: #fff;
-}
-
-.header ul li.active a i {
-    color: #fff;
+.top-bar .top-social li a {
+	height: 36px;
+	width: 36px;
+	line-height: 36px;
+	font-size: 13px;
 }
 
 /* Mobile menu */
@@ -500,42 +476,44 @@ img{
 	background-color: #fff;
 	border-radius: 7px;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	max-width: 1000px;
+	width: 100%;
+	height: 90vh;
 }
 
 .card-outer .card-inner-box {
 	position: relative;
-	min-height: 600px;
+	flex: 1;
+	min-height: 0;
+	overflow: hidden;
 	background-image: -moz-linear-gradient( 110deg, rgb(145,71,255) 0%, rgb(121,39,245) 100%);
 	background-image: -webkit-linear-gradient( 110deg, rgb(145,71,255) 0%, rgb(121,39,245) 100%);
 	background-image: -ms-linear-gradient( 110deg, rgb(145,71,255) 0%, rgb(121,39,245) 100%);
 	transition: 1s ease;
 }
 
-.card-outer .card-inner-box.offsetleft {
-	transition: .5s ease;
-	transform: translate(350px);
-}
-
 .card-item {
     position: absolute;
     border-radius: 6px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
     top: 0;
-    left: 100px;
+    left: 0;
     right: 0;
     bottom: 0;
     opacity: 0;
     visibility: hidden;
     z-index: 8;
-    max-width: 720px;
+    max-width: 100%;
 }
 
 .card-inner-box.active .card-item {
-	border-top-left-radius: 0px;
-	border-bottom-left-radius: 0px;
-    background-repeat: no-repeat;
-    background-position: right center;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	background-repeat: no-repeat;
+	background-position: right center;
 }
 
 .card-item .card-inner {
@@ -545,13 +523,13 @@ img{
 
 .card-inner-box .card-home {
 	text-align: center;
-	left: 120px;
+	left: 0;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-radius: 6px;
-	max-width: 1050px;
-	padding-top: 80px;
+	max-width: 100%;
+	padding: 60px 40px;
 }
 
 .card-item.active {
@@ -611,62 +589,6 @@ img{
 }
 
 /* author info */
-.author-info {
-	position: absolute;
-	left: 0px;
-	top: 0;
-	bottom: 0;
-	text-align: center;
-	padding: 50px 15px;
-	padding-top: 140px;
-	min-width: 350px;
-	border-bottom-left-radius: 6px;
-	border-top-left-radius: 8px;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-.author-info .image {
-	width: 160px;
-	height: 160px;
-	border-radius: 50%;
-	margin: 0 auto;
-	margin-bottom: 35px;
-	background: #fff;
-}
-
-.author-info .image img {
-	border: 5px solid rgba(31, 53, 67, 0.10);
-	border-radius: 50%;
-}
-
-.author-info .author h3 {
-	font-weight: 500;
-	color: #222;
-}
-
-.author-info .author .designation {
-	font-family: 'Poppins', sans-serif;
-	font-size: 15px;
-	margin-bottom: 30px;
-	color: #222;
-}
-
-.author-info .text {
-	font-size: 18px;
-	max-width: 600px;
-	margin: 0 auto;
-	margin-bottom: 30px;
-	color: #222;
-}
-
-.author-info .link-btn {
-	margin-bottom: 30px;
-}
-
-.author-info .theme-btn {
-	margin: 0 10px;
-}
 
 /*** 
 

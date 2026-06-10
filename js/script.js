@@ -92,12 +92,6 @@
 			$(card_item).addClass('active');
 		}
 
-		if(!menu_item_home.hasClass('active')) {
-			$(innerbox).addClass('offsetleft');
-		}else {
-			$(innerbox).removeClass('offsetleft');
-		}
-		
 		return false;
 	});
 

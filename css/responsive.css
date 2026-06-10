@@ -18,11 +18,7 @@
 
 }
 
-@media only screen and (max-width: 1199px) and (min-width: 768px){
-	.author-info {
-		left: 15px;
-	}
-}
+@media only screen and (max-width: 1199px) and (min-width: 768px){}
 
 @media only screen and (max-width: 1199px){
 	.main-menu .navbar-collapse {
@@ -226,8 +222,10 @@
 	
 	/**/
 	.card-outer .card-wrapper {
-	    background: transparent;
-	}
+		    background: transparent;
+		    height: auto;
+		    max-width: 100%;
+		}
 	.default-version .card-outer .card-wrapper {
 		box-shadow: none;
 	}
@@ -238,11 +236,7 @@
 		position: relative;
 		display: block;
 		padding-top: 15px;
-	}
-	.card-outer .card-inner-box.offsetleft {
-		margin-left: 0px;
-	}
-	.author-info {
+	}	.author-info {
 		position: relative;
 		display: none;
 	}
@@ -254,39 +248,30 @@
 	    padding-right: 0;
 	    max-width: 100%;
 	}
+	.top-bar {
+		height: auto;
+		padding: 10px 15px;
+		flex-wrap: wrap;
+	}
 
-	.header {
+	.top-bar .top-nav .main-menu {
+		flex-wrap: wrap;
+		gap: 2px;
+	}
+
+	.top-bar .top-nav .main-menu li a {
+		padding: 6px 12px;
+		font-size: 12px;
+	}
+
+	.top-bar .top-social {
 		display: none;
-	    bottom:  inherit;
-	    background: white;
-	    top: 8px;
-	}
-
-	.header ul li a.logo {margin: 0;height:  inherit;width:  inherit;border-radius:  inherit;line-height: 61px;padding: 9.5px 0px;border:  0px;}
-
-	.header ul li {
-	    border-bottom: 0px;
-	    display:  inline-block;
-	    vertical-align:  middle;
-	    margin-bottom: 5px;
-	}
-
-	.header ul li:before {
-	    display: none;
-	}
-
-	.header ul li.active a.logo {
-	    background-color: #f8e9e9;
-	}
-	.card-outer .card-inner-box {
-		margin-top: 65px;
-		background: transparent;
-		
-	}
-	.card-outer .card-inner-box.offsetleft {
-		transform: translate(0px);
-	}
-	.card-inner-box .card-item {
+	}	.card-outer .card-inner-box {
+			margin-top: 0;
+			background: #fff;
+			flex: auto;
+			min-height: 400px;
+		}	.card-inner-box .card-item {
 	    opacity: 1 !important;
 	    visibility: visible !important;
 	    z-index: 10;
