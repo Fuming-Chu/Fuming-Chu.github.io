@@ -52,8 +52,8 @@
 		Header Menu Desktop
 	*/
 	
-	var container = $('.card-outer .container');
-	var innerbox = $('.card-outer .card-inner-box');
+	var container = $('.main-area');
+	var innerbox = $('.card-inner-box');
 	var card_items = $('.card-item');
 	var animation_in = container.data('animation-in');
 	var animation_out = container.data('animation-out');
@@ -92,12 +92,6 @@
 			$(card_item).addClass('active');
 		}
 
-		if(!menu_item_home.hasClass('active')) {
-			$(innerbox).addClass('offsetleft');
-		}else {
-			$(innerbox).removeClass('offsetleft');
-		}
-		
 		return false;
 	});
 
