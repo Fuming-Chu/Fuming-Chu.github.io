@@ -376,28 +376,34 @@
                         <!-- card item -->
                         <div class="card-photos card-item" id="work">
                             <div class="card-inner">
+                                <div class="photos-container">
                                 <!-- Intro -->
                                 <div class="photos-intro">
-                                    <div class="photos-intro-text">
+                                    <div class="photos-intro-left">
+                                        <span class="photos-tag" data-i18n="photos.tag">Life</span>
                                         <h4 class="photos-title" data-i18n="photos.title">Photo Wall</h4>
-                                        <p class="photos-desc" data-i18n="photos.desc">Capturing every detail and moment of life through photographs.</p>
+                                        <p class="photos-desc" data-i18n="photos.desc">A curated collection of everyday moments — light, places, and the people in between. These photos are fragments of my life, captured and kept.</p>
                                     </div>
                                     <div class="photos-stats">
                                         <div class="photos-stat">
                                             <span class="photos-stat-num">6</span>
-                                            <span class="photos-stat-label" data-i18n="photos.stats.photos">Photos</span>
+                                            <span class="photos-stat-label" data-i18n="photos.stat.photos">Photos</span>
                                         </div>
                                         <div class="photos-stat">
-                                            <span class="photos-stat-num">3</span>
-                                            <span class="photos-stat-label" data-i18n="photos.stats.types">Categories</span>
+                                            <span class="photos-stat-num">6</span>
+                                            <span class="photos-stat-label" data-i18n="photos.stat.record">Moments</span>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Timeline -->
-                                <div class="photos-section">
-                                    <h4 class="photos-section-title" data-i18n="photos.timeline.title">Timeline</h4>
-                                    <div class="photos-timeline">
+                                <div class="photos-timeline-section">
+                                    <div class="photos-timeline-header">
+                                        <span class="photos-section-tag" data-i18n="photos.timeline.tag">Timeline</span>
+                                        <h4 class="photos-section-title" data-i18n="photos.timeline.title">Timeline</h4>
+                                        <p class="photos-section-desc" data-i18n="photos.timeline.desc">A month-by-month look back at recent life fragments — each photo tells a story of its season.</p>
+                                    </div>
+                                    <div class="timeline-scroll">
                                         <div class="timeline-track">
                                             <div class="timeline-item">
                                                 <div class="timeline-marker">
@@ -406,11 +412,11 @@
                                                 </div>
                                                 <div class="timeline-card">
                                                     <div class="timeline-card-img">
-                                                        <img src="images/gallery/1.jpg" alt="">
+                                                        <img src="images/gallery/3.jpg" alt="">
                                                     </div>
                                                     <div class="timeline-card-body">
-                                                        <h5 data-i18n="photos.tl.1.title">Summer Light</h5>
-                                                        <p data-i18n="photos.tl.1.desc">June sunlight filters through sycamore leaves outside the lab window.</p>
+                                                        <h5 data-i18n="photos.tl.3.title">Summer Light</h5>
+                                                        <p data-i18n="photos.tl.3.desc">June sunlight through sycamore leaves.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -421,11 +427,11 @@
                                                 </div>
                                                 <div class="timeline-card">
                                                     <div class="timeline-card-img">
-                                                        <img src="images/gallery/2.jpg" alt="">
+                                                        <img src="images/gallery/1.jpg" alt="">
                                                     </div>
                                                     <div class="timeline-card-body">
-                                                        <h5 data-i18n="photos.tl.2.title">Server Room Night</h5>
-                                                        <p data-i18n="photos.tl.2.desc">Late night in the server room, only indicator lights blinking steadily.</p>
+                                                        <h5 data-i18n="photos.tl.1.title">Server Room</h5>
+                                                        <p data-i18n="photos.tl.1.desc">Late night in the server room.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -436,11 +442,11 @@
                                                 </div>
                                                 <div class="timeline-card">
                                                     <div class="timeline-card-img">
-                                                        <img src="images/gallery/3.jpg" alt="">
+                                                        <img src="images/gallery/2.jpg" alt="">
                                                     </div>
                                                     <div class="timeline-card-body">
-                                                        <h5 data-i18n="photos.tl.3.title">Spring Campus</h5>
-                                                        <p data-i18n="photos.tl.3.desc">Cherry blossoms in April — Jinan at its most beautiful.</p>
+                                                        <h5 data-i18n="photos.tl.2.title">Spring Campus</h5>
+                                                        <p data-i18n="photos.tl.2.desc">Cherry blossoms in April.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -449,58 +455,70 @@
                                 </div>
 
                                 <!-- Share Grid -->
-                                <div class="photos-section">
-                                    <h4 class="photos-section-title" data-i18n="photos.share.title">Share</h4>
-                                    <p class="photos-section-sub" data-i18n="photos.share.sub">Moments</p>
+                                <div class="photos-share-section">
+                                    <h4 class="photos-share-title" data-i18n="photos.share.title">Share</h4>
+                                    <p class="photos-share-sub" data-i18n="photos.share.sub">Share Moments</p>
                                     <div class="photos-grid">
-                                         <div class="photos-grid-item" data-date="2026.04.09" data-location="上海 · 东方明珠">
+                                        <div class="photos-grid-item" role="button" tabindex="0" data-i18n-title="photos.a11y.open" title="Open photo"
+                                             data-date="2026.04.09" data-location="上海 · 东方明珠"
+                                             data-title-cn="上海 · 东方明珠" data-title-en="Oriental Pearl Tower"
+                                             data-desc-cn="夜幕下的东方明珠，灯光璀璨。" data-desc-en="The Oriental Pearl Tower at night, shining bright.">
                                             <img src="images/gallery/sh1.jpg" alt="">
                                             <div class="photos-grid-overlay">
-                                                <span class="grid-date">2026.06.01</span>
+                                                <span class="grid-date">2026.04.09</span>
                                                 <span class="grid-loc">上海 · 东方明珠</span>
                                             </div>
-                                            </img>
                                         </div>
-                                        <div class="photos-grid-item" data-date="2026.04.09" data-location="徐州 · 凌晨">
+                                        <div class="photos-grid-item" role="button" tabindex="0" data-i18n-title="photos.a11y.open" title="Open photo"
+                                             data-date="2026.04.09" data-location="徐州 · 凌晨"
+                                             data-title-cn="徐州 · 凌晨" data-title-en="Xuzhou at Dawn"
+                                             data-desc-cn="凌晨时分的徐州，城市尚未苏醒。" data-desc-en="Xuzhou at dawn, the city yet to wake.">
                                             <img src="images/gallery/xz1.jpg" alt="">
                                             <div class="photos-grid-overlay">
-                                                <span class="grid-date">2026.05.01</span>
+                                                <span class="grid-date">2026.04.09</span>
                                                 <span class="grid-loc">徐州 · 凌晨</span>
                                             </div>
-                                            </img>
                                         </div>
-                                        <div class="photos-grid-item" data-date="2026.04.11" data-location="武汉 · 黄鹤楼">
+                                        <div class="photos-grid-item" role="button" tabindex="0" data-i18n-title="photos.a11y.open" title="Open photo"
+                                             data-date="2026.04.11" data-location="武汉 · 黄鹤楼"
+                                             data-title-cn="武汉 · 黄鹤楼" data-title-en="Yellow Crane Tower"
+                                             data-desc-cn="昔人已乘黄鹤去，此地空余黄鹤楼。" data-desc-en="The Yellow Crane Tower, an ancient landmark in Wuhan.">
                                             <img src="images/gallery/wh1.jpg" alt="">
                                             <div class="photos-grid-overlay">
                                                 <span class="grid-date">2026.04.11</span>
                                                 <span class="grid-loc">武汉 · 黄鹤楼</span>
                                             </div>
-                                            </img>
                                         </div>
-                                        <div class="photos-grid-item" data-date="2026.04.09" data-location="鲁迅故里">
+                                        <div class="photos-grid-item" role="button" tabindex="0" data-i18n-title="photos.a11y.open" title="Open photo"
+                                             data-date="2026.04.09" data-location="鲁迅故里"
+                                             data-title-cn="鲁迅故里" data-title-en="Lu Xun's Hometown"
+                                             data-desc-cn="绍兴鲁迅故里，青瓦白墙，岁月静好。" data-desc-en="Lu Xun's former residence in Shaoxing — timeless and serene.">
                                             <img src="images/gallery/lx1.jpg" alt="">
                                             <div class="photos-grid-overlay">
                                                 <span class="grid-date">2026.04.09</span>
                                                 <span class="grid-loc">鲁迅故里</span>
                                             </div>
-                                            </img>
                                         </div>
-                                        <div class="photos-grid-item" data-date="2026.04.04" data-location="济南 · 超然楼">
+                                        <div class="photos-grid-item" role="button" tabindex="0" data-i18n-title="photos.a11y.open" title="Open photo"
+                                             data-date="2026.04.04" data-location="济南 · 超然楼"
+                                             data-title-cn="济南 · 超然楼" data-title-en="Chaoran Pavilion"
+                                             data-desc-cn="大明湖畔超然楼，夜色中更显超然。" data-desc-en="Chaoran Pavilion by Daming Lake, especially serene at night.">
                                             <img src="images/gallery/jn1.jpg" alt="">
                                             <div class="photos-grid-overlay">
                                                 <span class="grid-date">2026.04.04</span>
                                                 <span class="grid-loc">济南 · 超然楼</span>
                                             </div>
-                                            </img>
                                         </div>
-                                        <div class="photos-grid-item" data-date="2026.03.30" data-location="济南 · 工大傍晚">
+                                        <div class="photos-grid-item" role="button" tabindex="0" data-i18n-title="photos.a11y.open" title="Open photo"
+                                             data-date="2025.10.10" data-location="济南 · 工大傍晚"
+                                             data-title-cn="济南 · 工大傍晚" data-title-en="Sunset at QLUT"
+                                             data-desc-cn="齐鲁工大的傍晚，晚霞染红了天空。" data-desc-en="Sunset at Qilu University of Technology — the sky ablaze with color.">
                                             <img src="images/gallery/jn2.jpg" alt="">
                                             <div class="photos-grid-overlay">
                                                 <span class="grid-date">2025.10.10</span>
                                                 <span class="grid-loc">济南 · 工大傍晚</span>
                                             </div>
-                                            </img>
-                                    </div>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -511,6 +529,7 @@
                                     <span data-i18n="photos.tags.workbench">Workbench</span>
                                     <span data-i18n="photos.tags.notes">Notes</span>
                                     <span data-i18n="photos.tags.life">Life</span>
+                                </div>
                                 </div>
                             </div>
                         </div>

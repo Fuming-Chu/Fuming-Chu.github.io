@@ -549,17 +549,38 @@
 	   ========================================================================== */
 	var lightbox = null;
 
+	function getLang() {
+		return (window.I18N && I18N.current) || 'en';
+	}
+
 	function createLightbox() {
 		var lb = document.createElement('div');
 		lb.className = 'photos-lightbox';
-		lb.innerHTML = '<button class="lightbox-close">&times;</button>';
-		var img = document.createElement('img');
-		lb.appendChild(img);
+		lb.setAttribute('role', 'dialog');
+		lb.setAttribute('aria-modal', 'true');
+		lb.setAttribute('aria-label', 'Photo lightbox');
 
-		// Close handlers
+		lb.innerHTML = '<button class="lightbox-close" aria-label="Close lightbox">&times;</button>';
+
+		var inner = document.createElement('div');
+		inner.className = 'lightbox-inner';
+
+		var img = document.createElement('img');
+		img.alt = '';
+		inner.appendChild(img);
+
+		var panel = document.createElement('div');
+		panel.className = 'lightbox-panel';
+		panel.innerHTML = '<div class="lb-date"></div><h3 class="lb-title"></h3><p class="lb-desc"></p><div class="lb-loc"></div>';
+		inner.appendChild(panel);
+
+		lb.appendChild(inner);
+
 		function close() {
 			lb.classList.remove('active');
 			document.body.style.overflow = '';
+			// Return focus to previously active element
+			if (lb._prevFocus) lb._prevFocus.focus();
 		}
 
 		lb.querySelector('.lightbox-close').addEventListener('click', close);
@@ -571,15 +592,34 @@
 		});
 
 		document.body.appendChild(lb);
-		return { el: lb, img: img, close: close };
+		return { el: lb, img: img, panel: panel, close: close };
 	}
 
 	$(document).on('click', '.photos-grid-item', function() {
-		var src = $(this).find('img').attr('src');
+		var $item = $(this);
+		var src = $item.find('img').attr('src');
 		if (!src) return;
 
 		if (!lightbox) lightbox = createLightbox();
+
+		var lang = getLang();
+		var isCn = lang === 'cn';
+
 		lightbox.img.src = src;
+		lightbox.el._prevFocus = this;
+
+		// Fill panel data
+		var date = $item.attr('data-date') || '';
+		var title = isCn ? ($item.attr('data-title-cn') || '') : ($item.attr('data-title-en') || '');
+		var desc = isCn ? ($item.attr('data-desc-cn') || '') : ($item.attr('data-desc-en') || '');
+		var location = $item.attr('data-location') || '';
+
+		var panel = lightbox.panel;
+		panel.querySelector('.lb-date').textContent = date;
+		panel.querySelector('.lb-title').textContent = title;
+		panel.querySelector('.lb-desc').textContent = desc;
+		panel.querySelector('.lb-loc').textContent = location;
+
 		lightbox.el.classList.add('active');
 		document.body.style.overflow = 'hidden';
 	});
