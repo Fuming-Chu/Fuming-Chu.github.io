@@ -7,6 +7,7 @@
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link href="css/responsive.css" rel="stylesheet">
+<link href="css/jquery.fancybox.min.css" rel="stylesheet">
 
 <!--Favicon-->
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -373,111 +374,41 @@
                         </div>
                         <!-- end item -->
                         <!-- card item -->
-                        <div class="card-projects card-item" id="work" style="background-image:url(images/background/2.jpg)">
+                        <div class="card-photos card-item" id="work">
                             <div class="card-inner">
                                 <h4 class="title" data-i18n="works.title">Works</h4>
-                                <div class="row">
-                                    <div class="projects-block col-md-6">
-                                        <div class="inner-box">
-                                            <figure class="image">
-                                                <img src="images/gallery/1.jpg" alt="image">
-                                                <div class="overlay">
-                                                    <a class="lightbox-image option-btn" title="Image Caption Here" data-fancybox-group="example-gallery" href="images/gallery/1.jpg">
-                                                        <i class="fa fa-search"></i>
-                                                    </a>                                
-                                                </div>
-                                            </figure>
-                                            <div class="caption-title">
-                                                <h3><a href="#">Portfolio Item Title</a></h3>
-                                                <span>Branding, Print</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="projects-block col-md-6">
-                                        <div class="inner-box">
-                                            <figure class="image">
-                                                <img src="images/gallery/2.jpg" alt="image">
-                                                <div class="overlay">
-                                                    <a class="lightbox-image option-btn" title="Image Caption Here" data-fancybox-group="example-gallery" href="images/gallery/2.jpg">
-                                                        <i class="fa fa-search"></i>
-                                                    </a>                                
-                                                </div>
-                                            </figure>
-                                            <div class="caption-title">
-                                                <h3><a href="#">Portfolio Item Title</a></h3>
-                                                <span>Branding, Print</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="projects-block col-md-6">
-                                        <div class="inner-box">
-                                            <figure class="image">
-                                                <img src="images/gallery/3.jpg" alt="image">
-                                                <div class="overlay">
-                                                    <a class="lightbox-image option-btn" title="Image Caption Here" data-fancybox-group="example-gallery" href="images/gallery/3.jpg">
-                                                        <i class="fa fa-search"></i>
-                                                    </a>                                
-                                                </div>
-                                            </figure>
-                                            <div class="caption-title">
-                                                <h3><a href="#">Portfolio Item Title</a></h3>
-                                                <span>Branding, Print</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="projects-block col-md-6">
-                                        <div class="inner-box">
-                                            <figure class="image">
-                                                <img src="images/gallery/4.jpg" alt="image">
-                                                <div class="overlay">
-                                                    <a class="lightbox-image option-btn" title="Image Caption Here" data-fancybox-group="example-gallery" href="images/gallery/4.jpg">
-                                                        <i class="fa fa-search"></i>
-                                                    </a>                                
-                                                </div>
-                                            </figure>
-                                            <div class="caption-title">
-                                                <h3><a href="#">Portfolio Item Title</a></h3>
-                                                <span>Branding, Print</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="projects-block col-sm-6">
-                                        <div class="inner-box">
-                                            <figure class="image">
-                                                <img src="images/gallery/5.jpg" alt="image">
-                                                <div class="overlay">
-                                                    <a class="lightbox-image option-btn" title="Image Caption Here" data-fancybox-group="example-gallery" href="images/gallery/5.jpg">
-                                                        <i class="fa fa-search"></i>
-                                                    </a>                                
-                                                </div>
-                                            </figure>
-                                            <div class="caption-title">
-                                                <h3><a href="#">Portfolio Item Title</a></h3>
-                                                <span>Branding, Print</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="projects-block col-sm-6">
-                                        <div class="inner-box">
-                                            <figure class="image">
-                                                <img src="images/gallery/6.jpg" alt="image">
-                                                <div class="overlay">
-                                                    <a class="lightbox-image option-btn" title="Image Caption Here" data-fancybox-group="example-gallery" href="images/gallery/6.jpg">
-                                                        <i class="fa fa-search"></i>
-                                                    </a>                                
-                                                </div>
-                                            </figure>
-                                            <div class="caption-title">
-                                                <h3><a href="#">Portfolio Item Title</a></h3>
-                                                <span>Branding, Print</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="photo-wall">
+                                    <a class="photo-item lightbox-image" data-fancybox="gallery" href="images/gallery/1.jpg">
+                                        <img src="images/gallery/1.jpg" alt="photo">
+                                        <div class="photo-overlay"><i class="fa fa-search"></i></div>
+                                    </a>
+                                    <a class="photo-item lightbox-image" data-fancybox="gallery" href="images/gallery/2.jpg">
+                                        <img src="images/gallery/2.jpg" alt="photo">
+                                        <div class="photo-overlay"><i class="fa fa-search"></i></div>
+                                    </a>
+                                    <a class="photo-item lightbox-image" data-fancybox="gallery" href="images/gallery/3.jpg">
+                                        <img src="images/gallery/3.jpg" alt="photo">
+                                        <div class="photo-overlay"><i class="fa fa-search"></i></div>
+                                    </a>
+                                    <a class="photo-item lightbox-image" data-fancybox="gallery" href="images/gallery/4.jpg">
+                                        <img src="images/gallery/4.jpg" alt="photo">
+                                        <div class="photo-overlay"><i class="fa fa-search"></i></div>
+                                    </a>
+                                    <a class="photo-item lightbox-image" data-fancybox="gallery" href="images/gallery/5.jpg">
+                                        <img src="images/gallery/5.jpg" alt="photo">
+                                        <div class="photo-overlay"><i class="fa fa-search"></i></div>
+                                    </a>
+                                    <a class="photo-item lightbox-image" data-fancybox="gallery" href="images/gallery/6.jpg">
+                                        <img src="images/gallery/6.jpg" alt="photo">
+                                        <div class="photo-overlay"><i class="fa fa-search"></i></div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <!-- end item -->
+
                         <!-- card item -->
+<!-- card item -->
                         <div class="card-blog card-item" id="blog" style="background-image:url(images/background/2.jpg)">
                             <div class="card-inner">
                                 <h4 class="title" data-i18n="blog.title">Blog</h4>

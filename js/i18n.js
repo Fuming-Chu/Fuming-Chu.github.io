@@ -12,7 +12,7 @@ var I18N = {
 		'nav.about':      { en: 'About',      cn: '个人经历' },
 		'nav.resume':     { en: 'Resume',     cn: '个人简历' },
 		'nav.services':   { en: 'Services',   cn: '服务' },
-		'nav.works':      { en: 'Works',      cn: '作品' },
+		'nav.works':      { en: 'Photos',     cn: '照片墙' },
 		'nav.blog':       { en: 'Blog',       cn: '博客' },
 		'nav.contact':    { en: 'Contact',    cn: '联系我' },
 
@@ -61,7 +61,7 @@ var I18N = {
 		'services.title':       { en: 'Services',        cn: '服务' },
 
 		/* ---- works ---- */
-		'works.title':          { en: 'Works',           cn: '作品' },
+		'works.title':          { en: 'Photo Wall',      cn: '照片墙' },
 
 		/* ---- blog ---- */
 		'blog.title':           { en: 'Blog',            cn: '博客' },
