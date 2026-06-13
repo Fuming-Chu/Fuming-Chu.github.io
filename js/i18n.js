@@ -60,8 +60,26 @@ var I18N = {
 		/* ---- services ---- */
 		'services.title':       { en: 'Services',        cn: '服务' },
 
-		/* ---- works ---- */
-		'works.title':          { en: 'Photo Wall',      cn: '照片墙' },
+		/* ---- photos ---- */
+		'photos.title':         { en: 'Photo Wall',      cn: '照片墙' },
+		'photos.desc':          { en: 'Capturing every detail and moment of life through photographs.', cn: '用照片记录生活中的每一个细节与瞬间。' },
+		'photos.stats.photos':  { en: 'Photos',          cn: '张照片' },
+		'photos.stats.types':   { en: 'Categories',      cn: '种记录' },
+		'photos.timeline.title':{ en: 'Timeline',        cn: '时间轴流' },
+		'photos.share.title':   { en: 'Share',           cn: '分享' },
+		'photos.share.sub':     { en: 'Moments',          cn: '记录分享' },
+		'photos.tags.daily':    { en: 'Daily',           cn: '日常' },
+		'photos.tags.passing':  { en: 'Passing By',      cn: '路过' },
+		'photos.tags.workbench':{ en: 'Workbench',       cn: '工作台' },
+		'photos.tags.notes':    { en: 'Notes',           cn: '笔记' },
+		'photos.tags.life':     { en: 'Life',            cn: '生活' },
+		/* timeline cards */
+		'photos.tl.1.title':    { en: 'Summer Light',    cn: '夏日光影' },
+		'photos.tl.1.desc':     { en: 'June sunlight filters through sycamore leaves outside the lab window.', cn: '六月的阳光穿过梧桐叶，在实验室窗外留下斑驳的光影。' },
+		'photos.tl.2.title':    { en: 'Server Room Night', cn: '机房日常' },
+		'photos.tl.2.desc':     { en: 'Late night in the server room, only indicator lights blinking steadily.', cn: '深夜的机房，只有服务器指示灯在规律闪烁。' },
+		'photos.tl.3.title':    { en: 'Spring Campus',   cn: '春日校园' },
+		'photos.tl.3.desc':     { en: 'Cherry blossoms in April — Jinan at its most beautiful.', cn: '四月的校园，樱花盛开，是济南最美的季节。' },
 
 		/* ---- blog ---- */
 		'blog.title':           { en: 'Blog',            cn: '博客' },

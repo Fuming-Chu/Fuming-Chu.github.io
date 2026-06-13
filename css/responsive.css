@@ -153,9 +153,23 @@
 	}
 
 	/* ── photo wall ── */
-	.photo-wall {
+	.photos-intro {
+		flex-direction: column;
+		padding: 30px 20px 28px;
+		gap: 20px;
+	}
+	.photos-section {
+		padding: 28px 20px 0;
+	}
+	.timeline-item {
+		width: 250px;
+	}
+	.photos-grid {
 		grid-template-columns: repeat(2, 1fr);
-		gap: 12px;
+		padding: 0 20px 32px;
+	}
+	.photos-tags {
+		padding: 0 20px 40px;
 	}
 
 	/* ── blog ── */
@@ -306,7 +320,7 @@
 	.card-about,
 	.card-resume,
 	.card-services,
-	.card-photos,
+	
 	.card-blog,
 	.card-contact {
 		padding: 20px 14px !important;
@@ -328,9 +342,28 @@
 	}
 
 	/* ── photo wall ── */
-	.photo-wall {
+	.photos-stats {
+		gap: 12px;
+	}
+	.photos-stat {
+		padding: 12px 18px;
+		min-width: 64px;
+	}
+	.photos-stat-num {
+		font-size: 24px;
+	}
+	.timeline-item {
+		width: 220px;
+	}
+	.timeline-card-img {
+		height: 140px;
+	}
+	.photos-grid {
 		grid-template-columns: 1fr;
-		gap: 10px;
+		padding: 0 14px 28px;
+	}
+	.photos-tags {
+		padding: 0 14px 36px;
 	}
 
 	/* ── contact form ── */
@@ -350,7 +383,7 @@
 	.card-about,
 	.card-resume,
 	.card-services,
-	.card-photos,
+	
 	.card-blog,
 	.card-contact {
 		padding: 40px 36px !important;

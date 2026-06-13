@@ -542,6 +542,46 @@
 /* ==========================================================================
    When document is Resize, do
    ========================================================================== */
-	
+
+
+	/* ==========================================================================
+	   Custom Photo Lightbox
+	   ========================================================================== */
+	var lightbox = null;
+
+	function createLightbox() {
+		var lb = document.createElement('div');
+		lb.className = 'photos-lightbox';
+		lb.innerHTML = '<button class="lightbox-close">&times;</button>';
+		var img = document.createElement('img');
+		lb.appendChild(img);
+
+		// Close handlers
+		function close() {
+			lb.classList.remove('active');
+			document.body.style.overflow = '';
+		}
+
+		lb.querySelector('.lightbox-close').addEventListener('click', close);
+		lb.addEventListener('click', function(e) {
+			if (e.target === lb) close();
+		});
+		document.addEventListener('keydown', function(e) {
+			if (e.key === 'Escape' && lb.classList.contains('active')) close();
+		});
+
+		document.body.appendChild(lb);
+		return { el: lb, img: img, close: close };
+	}
+
+	$(document).on('click', '.photos-grid-item', function() {
+		var src = $(this).find('img').attr('src');
+		if (!src) return;
+
+		if (!lightbox) lightbox = createLightbox();
+		lightbox.img.src = src;
+		lightbox.el.classList.add('active');
+		document.body.style.overflow = 'hidden';
+	});
 
 })(window.jQuery);
