@@ -1189,6 +1189,7 @@ img{
 }
 .timeline-track {
     display: flex;
+    align-items: flex-start;
     gap: 16px;
     padding: 10px 0 24px;
     min-width: min-content;
@@ -1271,6 +1272,179 @@ img{
     color: #6b7280;
     margin: 0;
     line-height: 1.55;
+}
+
+/* ── Timeline Album ── */
+.timeline-album-item {
+    width: auto;
+    min-width: 256px;
+    max-width: 320px;
+}
+.timeline-album-item.expanded {
+    max-width: 820px;
+    width: 820px;
+}
+.album-cover {
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+}
+.album-cover:hover {
+    box-shadow: 0 4px 16px rgba(37,99,235,0.12);
+    border-color: #93c5fd;
+}
+.album-cover::after {
+    content: "Click to expand";
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-size: 11px;
+    color: #9ca3af;
+    background: rgba(255,255,255,0.85);
+    padding: 3px 10px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+.album-cover:hover::after {
+    opacity: 1;
+}
+.album-badge {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #2563eb;
+    background: #eff6ff;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+/* Album Expand Container */
+.album-expand {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), margin 0.35s ease;
+    margin-top: 0;
+}
+.timeline-album-item.expanded .album-expand {
+    max-height: 1600px;
+    margin-top: 16px;
+}
+
+/* Album Photo Grid */
+.album-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 12px;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+.timeline-album-item.expanded .album-photo-grid {
+    animation: fadeInUp 0.35s ease;
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Album Photo with Tape */
+.album-photo {
+    position: relative;
+    background: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    rotate: var(--rot, 0deg);
+}
+.album-photo:nth-child(odd) {
+    --rot: -1deg;
+}
+.album-photo:nth-child(even) {
+    --rot: 1.5deg;
+}
+.album-photo:nth-child(3n) {
+    --rot: -0.8deg;
+}
+.album-photo:hover {
+    transform: scale(1.03) rotate(0deg);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12), 0 0 0 1px rgba(37,99,235,0.15);
+    z-index: 2;
+}
+.album-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    border-radius: 2px;
+}
+
+/* Tape / Washi Tape Decoration */
+.tape {
+    position: absolute;
+    width: 48px;
+    height: 18px;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0.82;
+    border-radius: 2px;
+}
+.tape-tl {
+    top: -6px;
+    left: 12px;
+    rotate: -4deg;
+    background: repeating-linear-gradient(
+        45deg,
+        #fde68a,
+        #fde68a 3px,
+        #fcd34d 3px,
+        #fcd34d 6px
+    );
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.tape-tr {
+    top: -6px;
+    right: 12px;
+    rotate: 3deg;
+    background: repeating-linear-gradient(
+        -30deg,
+        #bfdbfe,
+        #bfdbfe 3px,
+        #93c5fd 3px,
+        #93c5fd 6px
+    );
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.tape-bl {
+    bottom: -6px;
+    left: 14px;
+    rotate: 5deg;
+    background: repeating-linear-gradient(
+        20deg,
+        #fbcfe8,
+        #fbcfe8 3px,
+        #f9a8d4 3px,
+        #f9a8d4 6px
+    );
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.tape-br {
+    bottom: -6px;
+    right: 14px;
+    rotate: -3deg;
+    background: repeating-linear-gradient(
+        -45deg,
+        #d1fae5,
+        #d1fae5 3px,
+        #a7f3d0 3px,
+        #a7f3d0 6px
+    );
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 /* ── Share Section ── */
@@ -2164,6 +2338,74 @@ img{
 
 .dark-version .card-photos .photos-title {
     color:  #fff;
+}
+
+.dark-version .card-photos .photos-desc {
+    color: rgba(255,255,255,0.65);
+}
+.dark-version .card-photos .photos-stat-label {
+    color: rgba(255,255,255,0.55);
+}
+.dark-version .card-photos .photos-section-title {
+    color: #f1f5f9;
+}
+.dark-version .card-photos .photos-section-desc {
+    color: rgba(255,255,255,0.55);
+}
+.dark-version .card-photos .photos-share-title {
+    color: #f1f5f9;
+}
+.dark-version .card-photos .photos-share-sub {
+    color: rgba(255,255,255,0.45);
+}
+.dark-version .card-photos .timeline-label {
+    color: #cbd5e1;
+}
+.dark-version .card-photos .timeline-track::before {
+    background: rgba(255,255,255,0.12);
+}
+.dark-version .card-photos .timeline-card {
+    background: rgba(30,41,59,0.9);
+    border-color: rgba(255,255,255,0.08);
+}
+.dark-version .card-photos .timeline-card-body h5 {
+    color: #f1f5f9;
+}
+.dark-version .card-photos .timeline-card-body p {
+    color: rgba(255,255,255,0.55);
+}
+.dark-version .card-photos .album-cover:hover {
+    border-color: rgba(37,99,235,0.5);
+}
+.dark-version .card-photos .album-cover::after {
+    background: rgba(30,41,59,0.9);
+    color: rgba(255,255,255,0.5);
+}
+.dark-version .card-photos .album-badge {
+    background: rgba(37,99,235,0.2);
+    color: #93c5fd;
+}
+.dark-version .card-photos .album-expand .album-photo-grid {
+    background: rgba(30,41,59,0.6);
+    border-color: rgba(255,255,255,0.08);
+}
+.dark-version .card-photos .album-photo {
+    background: rgba(30,41,59,0.85);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.06);
+}
+.dark-version .card-photos .album-photo:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4), 0 0 0 1px rgba(37,99,235,0.3);
+}
+.dark-version .card-photos .timeline-dot {
+    background: #1e293b;
+}
+.dark-version .card-photos .photos-timeline-section {
+    background: rgba(30,41,59,0.4);
+    border-color: rgba(255,255,255,0.08);
+}
+.dark-version .card-photos .photos-tags span {
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.6);
 }
 
 .dark-version .card-blog .title {

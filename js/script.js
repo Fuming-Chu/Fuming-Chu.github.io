@@ -624,4 +624,62 @@
 		document.body.style.overflow = 'hidden';
 	});
 
+	/* ==========================================================================
+	   Timeline Album Expand / Collapse
+	   ========================================================================== */
+	$(document).on('click', '.album-cover', function(e) {
+		var $cover = $(this);
+		var $item = $cover.closest('.timeline-album-item');
+
+		// If this album is already expanded, collapse it
+		if ($item.hasClass('expanded')) {
+			$item.removeClass('expanded');
+			return;
+		}
+
+		// Collapse any other expanded album on the same track
+		$item.siblings('.timeline-album-item.expanded').removeClass('expanded');
+
+		// Expand this album
+		$item.addClass('expanded');
+
+		// Scroll the expanded album into view if needed
+		setTimeout(function() {
+			var rect = $item[0].getBoundingClientRect();
+			if (rect.right > window.innerWidth - 20) {
+				$item[0].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+			}
+		}, 100);
+	});
+
+	/* Lightbox on album photos */
+	$(document).on('click', '.album-photo', function(e) {
+		e.stopPropagation();
+		var $photo = $(this);
+		var src = $photo.find('img').attr('src');
+		if (!src) return;
+
+		if (!lightbox) lightbox = createLightbox();
+
+		var lang = getLang();
+		var isCn = lang === 'cn';
+
+		lightbox.img.src = src;
+		lightbox.el._prevFocus = this;
+
+		var date = $photo.attr('data-date') || '';
+		var title = isCn ? ($photo.attr('data-title-cn') || '') : ($photo.attr('data-title-en') || '');
+		var desc = isCn ? ($photo.attr('data-desc-cn') || '') : ($photo.attr('data-desc-en') || '');
+		var location = $photo.attr('data-location') || '';
+
+		var panel = lightbox.panel;
+		panel.querySelector('.lb-date').textContent = date;
+		panel.querySelector('.lb-title').textContent = title;
+		panel.querySelector('.lb-desc').textContent = desc;
+		panel.querySelector('.lb-loc').textContent = location;
+
+		lightbox.el.classList.add('active');
+		document.body.style.overflow = 'hidden';
+	});
+
 })(window.jQuery);

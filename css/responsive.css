@@ -177,6 +177,21 @@
 	.timeline-item {
 		width: 240px;
 	}
+	.timeline-album-item {
+			width: 240px;
+			max-width: 100%;
+		}
+		.timeline-album-item.expanded {
+			max-width: 100%;
+			width: 100%;
+		}
+		.album-photo-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 12px;
+		}
+		.album-cover::after {
+			display: none;
+		}
 	.photos-grid {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 8px;
@@ -390,6 +405,21 @@
 	.timeline-item {
 		width: 220px;
 	}
+t	.timeline-album-item {
+			width: 220px;
+			max-width: 100%;
+		}
+		.timeline-album-item.expanded {
+			max-width: 100%;
+			width: 100%;
+		}
+		.album-photo-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 8px;
+		}
+		.album-cover::after {
+			display: none;
+		}
 	.timeline-track {
 		gap: 12px;
 	}
