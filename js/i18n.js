@@ -12,7 +12,7 @@ var I18N = {
 		'nav.about':      { en: 'About',      cn: '个人经历' },
 		'nav.resume':     { en: 'Resume',     cn: '个人简历' },
 		'nav.services':   { en: 'Services',   cn: '服务' },
-		'nav.works':      { en: 'Works',      cn: '作品' },
+		'nav.works':      { en: 'Photos',     cn: '照片墙' },
 		'nav.blog':       { en: 'Blog',       cn: '博客' },
 		'nav.contact':    { en: 'Contact',    cn: '联系我' },
 
@@ -60,8 +60,30 @@ var I18N = {
 		/* ---- services ---- */
 		'services.title':       { en: 'Services',        cn: '服务' },
 
-		/* ---- works ---- */
-		'works.title':          { en: 'Works',           cn: '作品' },
+		/* ---- photos ---- */
+		'photos.tag':           { en: 'Life',           cn: '生活' },
+		'photos.title':         { en: 'Photo Wall',      cn: '照片墙' },
+		'photos.desc':          { en: 'A curated collection of everyday moments — light, places, and the people in between. These photos are fragments of my life, captured and kept.', cn: '用照片记录生活中的光影、地点与人物，这些瞬间是我生活的碎片，也是我珍视的记忆。' },
+		'photos.stat.photos':   { en: 'Photos',          cn: '照片' },
+		'photos.stat.record':   { en: 'Moments',         cn: '记录' },
+		'photos.timeline.tag':  { en: 'Timeline',        cn: '时间轴' },
+		'photos.timeline.title':{ en: 'Timeline',        cn: '时间轴流' },
+		'photos.timeline.desc': { en: 'A month-by-month look back at recent life fragments — each photo tells a story of its season.', cn: '按月份回顾近期的生活片段，每张照片都记录着属于那个季节的故事。' },
+		'photos.share.title':   { en: 'Share',           cn: '分享' },
+		'photos.share.sub':     { en: 'Share Moments',    cn: '记录分享' },
+		'photos.tags.daily':    { en: 'Daily',           cn: '日常' },
+		'photos.tags.passing':  { en: 'Passing By',      cn: '路过' },
+		'photos.tags.workbench':{ en: 'Workbench',       cn: '工作台' },
+		'photos.tags.notes':    { en: 'Notes',           cn: '笔记' },
+		'photos.tags.life':     { en: 'Life',            cn: '生活' },
+		'photos.a11y.open':     { en: 'Open photo',      cn: '打开照片' },
+		/* timeline cards */
+		'photos.tl.1.title':    { en: 'Server Room',     cn: '机房日常' },
+		'photos.tl.1.desc':     { en: 'Late night in the server room — only the indicator lights blink steadily.', cn: '深夜的机房，只有服务器指示灯在规律闪烁。' },
+		'photos.tl.2.title':    { en: 'Spring Campus',   cn: '春日校园' },
+		'photos.tl.2.desc':     { en: 'Cherry blossoms in April — Jinan at its most beautiful time of year.', cn: '四月的校园，樱花盛开，是济南最美的季节。' },
+		'photos.tl.3.title':    { en: 'Summer Light',    cn: '夏日光影' },
+		'photos.tl.3.desc':     { en: 'June sunlight through sycamore leaves, leaving dappled shadows outside the lab window.', cn: '六月的阳光穿过梧桐叶，在实验室窗外留下斑驳的光影。' },
 
 		/* ---- blog ---- */
 		'blog.title':           { en: 'Blog',            cn: '博客' },
