@@ -19,8 +19,8 @@ var I18N = {
 		/* ---- home / profile ---- */
 		'home.biography.title':   { en: 'Biography',   cn: '个人简介' },
 		'home.biography.text':    {
-			en: 'I am currently a researcher at the National Supercomputing Center in Jinan, where my work focuses on high-performance interconnect networks. My research interests span RoCEv2 congestion control, long-distance RDMA transport protocols (LongCC), and digital twin network architectures. I am passionate about bridging theoretical models with real-world system implementations to improve the performance and reliability of large-scale distributed systems.',
-			cn: '我目前是济南国家超级计算中心的一名研究员，主要从事高性能互连网络方面的研究工作。我的研究兴趣涵盖 RoCEv2 拥塞控制、长距离 RDMA 传输协议（LongCC）以及数字孪生网络架构。我热衷于将理论模型与实际系统实现相结合，以提升大规模分布式系统的性能和可靠性。'
+			en: 'I am currently an intern at the National Supercomputing Center in Jinan, where my work focuses on high-performance interconnect networks. My research interests span RoCEv2 congestion control, long-distance RDMA transport protocols (LongCC), and digital twin network architectures. I am passionate about bridging theoretical models with real-world system implementations to improve the performance and reliability of large-scale distributed systems.',
+			cn: '我目前是济南国家超级计算中心的一名实习生，主要从事高性能互连网络方面的研究工作。我的研究兴趣涵盖 RoCEv2 拥塞控制、长距离 RDMA 传输协议（LongCC）以及数字孪生网络架构。我热衷于将理论模型与实际系统实现相结合，以提升大规模分布式系统的性能和可靠性。'
 		},
 		'home.interests.title':   { en: 'Interests',    cn: '研究兴趣' },
 		'home.interests.1':       { en: 'ECN Parameter Tuning',       cn: 'ECN 参数调优' },
@@ -47,7 +47,7 @@ var I18N = {
 		'about.address':      { en: 'Address:',         cn: '地址：' },
 		'about.address.value':{ en: 'San francisco, USA', cn: '中国 · 济南' },
 		'about.email':        { en: 'Email:',           cn: '邮箱：' },
-		'about.email.value':  { en: 'mahirarashid@gmail.com', cn: 'chufuming@nsccjn.cn' },
+		'about.email.value':  { en: 'cfm3582@gmail.com', cn: 'cfm3582@163.com' },
 		'about.freelance':    { en: 'Freelance:',       cn: '状态：' },
 		'about.freelance.value':{ en: 'Available',      cn: '在职' },
 		'about.skills':       { en: 'Skills',           cn: '技能' },
