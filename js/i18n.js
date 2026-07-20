@@ -47,7 +47,7 @@ var I18N = {
 		'about.address':      { en: 'Address:',         cn: '地址：' },
 		'about.address.value':{ en: 'San francisco, USA', cn: '中国 · 济南' },
 		'about.email':        { en: 'Email:',           cn: '邮箱：' },
-		'about.email.value':  { en: 'mahirarashid@gmail.com', cn: 'chufuming@nsccjn.cn' },
+		'about.email.value':  { en: 'cfm3582@gmail.com', cn: 'cfm3582@163.com' },
 		'about.freelance':    { en: 'Freelance:',       cn: '状态：' },
 		'about.freelance.value':{ en: 'Available',      cn: '在职' },
 		'about.skills':       { en: 'Skills',           cn: '技能' },
